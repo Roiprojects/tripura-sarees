@@ -1,0 +1,6 @@
+
+UPDATE public.categories SET banner_url='/__l5e/assets-v1/003fcc8b-2e39-4ef8-a366-a8ab1549f252/banner-infant-casual.jpg', image_url='/__l5e/assets-v1/003fcc8b-2e39-4ef8-a366-a8ab1549f252/banner-infant-casual.jpg' WHERE id='a2fadf99-667d-43fc-bea9-face0da02e02';
+UPDATE public.categories SET banner_url='/__l5e/assets-v1/7e845c47-4a8c-4730-97d5-23a378e5a2e3/banner-infant-ethnic.jpg', image_url='/__l5e/assets-v1/7e845c47-4a8c-4730-97d5-23a378e5a2e3/banner-infant-ethnic.jpg' WHERE id='d13c044f-ffc3-45c0-af6c-a0e133a587cc';
+UPDATE public.categories SET banner_url='/__l5e/assets-v1/19eea821-9e07-4359-8804-c0016dc8ab26/banner-infant-giftsets.jpg', image_url='/__l5e/assets-v1/19eea821-9e07-4359-8804-c0016dc8ab26/banner-infant-giftsets.jpg' WHERE id='4ac55019-1a1b-48a4-bfb0-4a4b33860ec3';
+UPDATE public.categories SET banner_url='/__l5e/assets-v1/fae5255f-c111-4a27-81ec-d49dd42c5c80/banner-infant-newborn.jpg', image_url='/__l5e/assets-v1/fae5255f-c111-4a27-81ec-d49dd42c5c80/banner-infant-newborn.jpg' WHERE id='92f75282-685a-4de3-8b53-0997a4749958';
+UPDATE public.categories SET banner_url='/__l5e/assets-v1/9b35c1ef-3a40-4071-b1e1-bf1408bb6448/banner-infant-party.jpg', image_url='/__l5e/assets-v1/9b35c1ef-3a40-4071-b1e1-bf1408bb6448/banner-infant-party.jpg' WHERE id='3b44c37c-e921-4421-8fbf-18e368639b1e';

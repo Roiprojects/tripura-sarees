@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" role="img" aria-label="Tripura Sarees">
+  <!-- Background -->
+  <rect width="520" height="140" fill="#1a1a1a" rx="0"/>
+  <!-- Stylised T monogram -->
+  <g transform="translate(150 45)">
+    <!-- Top bar of T -->
+    <rect x="-52" y="0" width="104" height="18" rx="3" fill="#c0c0c0"/>
+    <!-- Stem of T -->
+    <rect x="-10" y="0" width="20" height="68" rx="2" fill="#c0c0c0"/>
+    <!-- Subtle highlight on T -->
+    <rect x="-52" y="0" width="104" height="6" rx="2" fill="#e0e0e0" opacity="0.4"/>
+    <rect x="-10" y="0" width="20" height="6" rx="2" fill="#e0e0e0" opacity="0.4"/>
+    <!-- Bottom serif accent -->
+    <rect x="-14" y="64" width="28" height="4" rx="1" fill="#a0a0a0"/>
+  </g>
+  <!-- TRIPURA text -->
+  <text x="290" y="58" font-family="'Nunito', 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="300" fill="#ffffff" letter-spacing="18">TRIPURA</text>
+  <!-- Subtle divider line -->
+  <line x1="290" y1="74" x2="505" y2="74" stroke="#C9A227" stroke-width="1.5" opacity="0.7"/>
+  <!-- SAREES tagline -->
+  <text x="290" y="96" font-family="'Nunito', 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" fill="#C9A227" letter-spacing="8">SAREES</text>
+  <!-- Small diamond accent -->
+  <rect x="395" y="103" width="4" height="4" fill="#C9A227" transform="rotate(45 397 105)"/>
+</svg>

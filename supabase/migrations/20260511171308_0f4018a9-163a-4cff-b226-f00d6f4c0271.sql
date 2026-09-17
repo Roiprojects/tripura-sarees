@@ -1,0 +1,1 @@
+UPDATE public.homepage_sections SET visible = true WHERE key = 'shop-by-age';

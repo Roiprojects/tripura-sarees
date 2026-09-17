@@ -1,0 +1,1 @@
+DELETE FROM public.homepage_banners WHERE id IN ('4e5b9d52-382a-48f8-ae29-5556f78df1ea','1217ec26-bbb9-4e9c-b3b4-1c9a43f4c949');

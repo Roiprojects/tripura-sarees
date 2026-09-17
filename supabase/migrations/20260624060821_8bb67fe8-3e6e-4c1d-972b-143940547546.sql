@@ -1,0 +1,1 @@
+DELETE FROM public.homepage_banners WHERE group_key = 'footer-banners' AND title IN ('Shop By Age','Frock Store');

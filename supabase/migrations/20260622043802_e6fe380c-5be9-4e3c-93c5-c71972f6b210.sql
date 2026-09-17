@@ -1,0 +1,1 @@
+update public.categories set banner_url='https://wbjoiudbsiplyyroujxv.supabase.co/storage/v1/object/public/homepage-media/category-banners/girls-casual-advanced.jpg' where slug='girls-casual';

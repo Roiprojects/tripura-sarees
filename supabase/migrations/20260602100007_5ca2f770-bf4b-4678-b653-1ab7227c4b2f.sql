@@ -1,0 +1,1 @@
+UPDATE public.homepage_sections SET sort_order = 45 WHERE key = 'trending';

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140" role="img" aria-label="Tripura Sarees">
+  <!-- Dark background -->
+  <rect width="140" height="140" fill="#1a1a1a" rx="0"/>
+  <!-- Stylised T monogram centered -->
+  <g transform="translate(70 50)">
+    <!-- Top bar of T -->
+    <rect x="-26" y="0" width="52" height="9" rx="2" fill="#c0c0c0"/>
+    <!-- Stem of T -->
+    <rect x="-5" y="0" width="10" height="35" rx="1" fill="#c0c0c0"/>
+    <!-- Bottom serif -->
+    <rect x="-7" y="32" width="14" height="3" rx="1" fill="#a0a0a0"/>
+  </g>
+  <!-- Small gold accent below -->
+  <rect x="68" y="96" width="4" height="4" fill="#C9A227" transform="rotate(45 70 98)"/>
+  <!-- Bottom text -->
+  <text x="70" y="118" font-family="'Nunito', 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#C9A227" letter-spacing="4" text-anchor="middle">SAREES</text>
+</svg>

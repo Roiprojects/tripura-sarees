@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- %SITE_*% placeholders are filled from src/config/site.ts at build time (vite.config.ts) -->
+    <title>%SITE_TITLE%</title>
+    <meta name="description" content="%SITE_DESCRIPTION%">
+    <meta name="author" content="%SITE_AUTHOR%" />
+
+    <link rel="icon" href="%SITE_FAVICON%" />
+    <link rel="apple-touch-icon" href="%SITE_FAVICON%" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="%SITE_TITLE%">
+    <meta property="og:description" content="%SITE_DESCRIPTION%">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="%SITE_TITLE%">
+    <meta name="twitter:description" content="%SITE_DESCRIPTION%">
+    <meta name="theme-color" content="#0F5E4B" />
+
+</head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

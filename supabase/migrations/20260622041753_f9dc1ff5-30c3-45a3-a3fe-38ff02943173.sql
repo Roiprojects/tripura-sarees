@@ -1,0 +1,1 @@
+UPDATE public.categories SET banner_url = 'https://wbjoiudbsiplyyroujxv.supabase.co/storage/v1/object/public/homepage-media/category-banners/boys-casual-premium-v3.jpg' WHERE slug = 'boys-casual';

@@ -1,0 +1,2 @@
+UPDATE public.homepage_banners SET title = 'Girls Birthday Wear' WHERE id = '3add9bfb-89b1-4d48-a478-78400a607725';
+UPDATE public.homepage_banners SET title = 'Boys Birthday Wear' WHERE id = 'b9951786-9a60-4622-830b-60f01528390d';

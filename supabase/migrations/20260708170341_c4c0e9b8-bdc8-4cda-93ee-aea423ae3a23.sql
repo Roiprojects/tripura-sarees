@@ -1,0 +1,2 @@
+ALTER TABLE public.products ADD COLUMN IF NOT EXISTS extra_category_ids uuid[] NOT NULL DEFAULT '{}';
+CREATE INDEX IF NOT EXISTS idx_products_extra_category_ids ON public.products USING gin (extra_category_ids);

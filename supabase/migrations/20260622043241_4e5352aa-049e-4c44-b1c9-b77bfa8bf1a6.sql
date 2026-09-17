@@ -1,0 +1,1 @@
+UPDATE public.categories SET banner_url = 'https://wbjoiudbsiplyyroujxv.supabase.co/storage/v1/object/public/homepage-media/category-banners/frock-party-gowns-premium.jpg' WHERE slug = 'frock-party-gowns';

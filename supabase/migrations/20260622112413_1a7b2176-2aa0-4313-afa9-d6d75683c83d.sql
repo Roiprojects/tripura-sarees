@@ -1,0 +1,3 @@
+UPDATE public.categories SET banner_url = '/__l5e/assets-v1/f2ecdf73-bca8-49ca-9c68-f6faf39b0bc9/shop-boys.webp', image_url = COALESCE(image_url, '/__l5e/assets-v1/f2ecdf73-bca8-49ca-9c68-f6faf39b0bc9/shop-boys.webp') WHERE slug = 'boys-root';
+UPDATE public.categories SET banner_url = '/__l5e/assets-v1/1e597787-18b4-4cac-bdd4-4ca3c292eaa6/shop-girls.webp', image_url = COALESCE(image_url, '/__l5e/assets-v1/1e597787-18b4-4cac-bdd4-4ca3c292eaa6/shop-girls.webp') WHERE slug = 'girls-root';
+UPDATE public.categories SET banner_url = '/__l5e/assets-v1/01d9123a-9030-4925-95b0-efde4ede7b5b/shop-newborn.webp', image_url = COALESCE(image_url, '/__l5e/assets-v1/01d9123a-9030-4925-95b0-efde4ede7b5b/shop-newborn.webp') WHERE slug = 'infants';
