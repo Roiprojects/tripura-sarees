@@ -1,4 +1,4 @@
-project_id = "your-project-ref"
+project_id = "guhtcjxbylrdovvrjfkn"
 
 [functions.erp-api]
 verify_jwt = false
