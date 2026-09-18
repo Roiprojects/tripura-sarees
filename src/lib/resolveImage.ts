@@ -96,6 +96,10 @@ export const resolveImage = (src?: string | null): string => {
   if (pointerByPath.has(s)) return pointerByPath.get(s)!;
 
   if (s.startsWith("/") && !s.startsWith("/src/")) {
+    if (s.startsWith("/products/sarees/") && s.endsWith(".svg")) {
+      const jpg = s.replace(/\.svg$/, ".jpg");
+      return withBase(jpg);
+    }
     if (BASE !== "/" && s.startsWith(BASE)) return s;
     return withBase(s);
   }
