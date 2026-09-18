@@ -97,7 +97,7 @@ export const ProductCard = ({ product, selectedColor }: { product: P; selectedCo
           height={400}
           loading="eager" decoding="async"
           onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/placeholder.svg"; }}
-          className={`w-full h-full object-contain bg-muted luxury-zoom ${outOfStock ? "opacity-60 grayscale" : ""}`}
+          className={`w-full h-full object-contain bg-muted ${outOfStock ? "opacity-60 grayscale" : ""}`}
         />
         {outOfStock && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/30 backdrop-blur-[2px]">

@@ -945,7 +945,7 @@ const WalletProductCard = ({ product, balance }: { product: any; balance: number
           src={resolveImage(product.images?.[0])}
           alt={product.name}
           onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/placeholder.svg"; }}
-          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-contain"
           loading="lazy"
         />
       </Link>

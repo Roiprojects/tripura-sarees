@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
 import { Flame, TrendingUp, Heart } from "lucide-react";
 import { useSectionProducts } from "@/hooks/useSectionProducts";
 import { resolveImage } from "@/lib/resolveImage";
@@ -33,21 +32,6 @@ const RailCard = ({
   badgeClass: string;
   BadgeIcon: React.ComponentType<{ className?: string }>;
 }) => {
-  const [frame, setFrame] = useState(0);
-  const [hover, setHover] = useState(false);
-  const intervalRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    if (!hover) return;
-    intervalRef.current = window.setInterval(
-      () => setFrame((f) => (f + 1) % product.frames.length),
-      700,
-    );
-    return () => {
-      if (intervalRef.current) window.clearInterval(intervalRef.current);
-    };
-  }, [hover, product.frames.length]);
-
   const { getAvailableStock } = useCart();
   const { productIds, toggle } = useWishlist();
   const wished = productIds.has(product.id);
@@ -60,24 +44,15 @@ const RailCard = ({
   return (
     <div className="group shrink-0 w-[220px] sm:w-[240px] md:w-[260px]">
       <Link to={product.href} className="block">
-        <div
-          className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted/30 select-none"
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-        >
-          {product.frames.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={product.name}
-              loading="lazy"
-              decoding="async"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/placeholder.svg"; }}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
-                i === frame ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
+        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted/30 select-none">
+          <img
+            src={product.frames[0] || "/placeholder.svg"}
+            alt={product.name}
+            loading="lazy"
+            decoding="async"
+            onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/placeholder.svg"; }}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
 
           <span className={`absolute top-3 left-3 z-10 inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-white text-[10px] font-bold tracking-wide shadow-md ${badgeClass}`}>
             <BadgeIcon className="w-3 h-3" />

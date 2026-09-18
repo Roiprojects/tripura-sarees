@@ -78,7 +78,7 @@ export const ShopByOccasion = () => {
                   src={t.image}
                   alt={`${t.label} sarees`}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute inset-2 rounded-t-full rounded-b-xl border border-sky/40 pointer-events-none group-hover:border-sky/80 transition-colors" />

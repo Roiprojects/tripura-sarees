@@ -105,7 +105,7 @@ export const BlogSection = () => {
                     src={p.image}
                     alt={p.title || ""}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover"
                   />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-emerald-100 via-amber-50 to-amber-100" />

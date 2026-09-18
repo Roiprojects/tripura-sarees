@@ -129,7 +129,7 @@ const DynamicSectionContent = ({ section, isMobile }: { section: Section; isMobi
           {linkedCats.map((c: any) => (
             <Link key={c.id} to={`/category/${c.slug}`} className="group">
               <div className="aspect-square rounded-2xl overflow-hidden bg-muted">
-                {c.image_url && <img src={resolveImage(c.image_url)} alt={c.name} loading="lazy" onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/placeholder.svg"; }} className="w-full h-full object-cover group-hover:scale-105 transition" />}
+                {c.image_url && <img src={resolveImage(c.image_url)} alt={c.name} loading="lazy" onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/placeholder.svg"; }} className="w-full h-full object-cover" />}
               </div>
               <div className="text-center mt-2 text-sm font-semibold">{c.name}</div>
             </Link>

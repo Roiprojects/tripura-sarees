@@ -27,7 +27,7 @@ export const FooterBanners = () => {
                   src={img}
                   alt={b.title || ""}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/10 md:from-black/65 md:via-black/25 md:to-transparent" />

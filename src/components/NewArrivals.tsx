@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { Heart } from "lucide-react";
+import { Heart, ChevronLeft, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useSectionProducts } from "@/hooks/useSectionProducts";
 import { resolveImage } from "@/lib/resolveImage";
@@ -11,27 +11,20 @@ import { productDetailLine } from "@/lib/sareeCatalog";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import type { Product as DBProduct } from "@/lib/database.types";
 
-
 type Product = {
   id: string;
   name: string;
   price: number;
   /** Short line under the price (occasion or "Free Size"). */
   detail: string;
-  frames: string[];
+  image: string;
   href: string;
   stock?: number;
   /** Full product row, needed to add the product to the cart. */
   raw?: DBProduct;
 };
 
-
-
 const ProductCard = ({ product }: { product: Product }) => {
-  const [frame, setFrame] = useState(0);
-  const [hover, setHover] = useState(false);
-  const dragRef = useRef<{ startX: number; startFrame: number } | null>(null);
-  const intervalRef = useRef<number | null>(null);
   const { productIds, toggle } = useWishlist();
   const { getAvailableStock } = useCart();
   const wished = productIds.has(product.id);
@@ -40,62 +33,18 @@ const ProductCard = ({ product }: { product: Product }) => {
     : undefined;
   const outOfStock = availableStock === 0;
 
-  // auto-rotate on hover
-  useEffect(() => {
-    if (!hover || dragRef.current) return;
-    intervalRef.current = window.setInterval(() => {
-      setFrame((f) => (f + 1) % product.frames.length);
-    }, 700);
-    return () => {
-      if (intervalRef.current) window.clearInterval(intervalRef.current);
-    };
-  }, [hover, product.frames.length]);
-
-  const handlePointerDown = (e: React.PointerEvent) => {
-    (e.target as HTMLElement).setPointerCapture(e.pointerId);
-    dragRef.current = { startX: e.clientX, startFrame: frame };
-    if (intervalRef.current) window.clearInterval(intervalRef.current);
-  };
-
-  const handlePointerMove = (e: React.PointerEvent) => {
-    if (!dragRef.current) return;
-    const dx = e.clientX - dragRef.current.startX;
-    const step = Math.round(dx / 30);
-    const next =
-      (dragRef.current.startFrame + step) % product.frames.length;
-    setFrame(next < 0 ? next + product.frames.length : next);
-  };
-
-  const handlePointerUp = (e: React.PointerEvent) => {
-    (e.target as HTMLElement).releasePointerCapture(e.pointerId);
-    dragRef.current = null;
-  };
-
   return (
-    <div className="group shrink-0 w-[260px] md:w-[280px]">
+    <div className="new-arrival-card shrink-0 w-[240px] sm:w-[260px] md:w-[280px] snap-start">
       <Link to={product.href} className="block">
-        <div
-          className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted/30 select-none cursor-grab active:cursor-grabbing"
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          onPointerCancel={handlePointerUp}
-        >
-          {/* preload all frames stacked, fade between */}
-          {product.frames.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={product.name}
-              loading="eager" decoding="async"
-              draggable={false}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-200 ${
-                i === frame ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
+        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted/30 select-none">
+          <img
+            src={product.image}
+            alt={product.name}
+            loading="eager"
+            decoding="async"
+            draggable={false}
+            className="w-full h-full object-cover"
+          />
 
           {/* badge */}
           <span className="absolute top-3 left-3 z-10 inline-block px-2.5 py-1 rounded-md bg-sky text-sky-foreground text-[10px] font-bold tracking-wide shadow-sm">
@@ -113,27 +62,27 @@ const ProductCard = ({ product }: { product: Product }) => {
 
           <button
             onClick={(e) => {
-              e.preventDefault(); e.stopPropagation();
-              toggle({ id: product.id, name: product.name, price: product.price, images: product.frames } as any);
+              e.preventDefault();
+              e.stopPropagation();
+              toggle({ id: product.id, name: product.name, price: product.price, images: [product.image] } as any);
             }}
             aria-label="Add to wishlist"
-            className="absolute top-3 right-3 z-30 w-9 h-9 rounded-full bg-white/95 shadow-md flex items-center justify-center hover:scale-110 transition"
+            className="absolute top-3 right-3 z-30 w-9 h-9 rounded-full bg-white/95 shadow-md flex items-center justify-center transition"
           >
             <Heart className={`w-4 h-4 ${wished ? "text-primary" : "text-foreground/60"}`} fill={wished ? "currentColor" : "none"} />
           </button>
 
-          {/* add to cart — opens the size/colour picker and saves to the cart */}
+          {/* add to cart */}
           {product.raw && (
             <div className="absolute bottom-3 right-3 z-30" onPointerDown={(e) => e.stopPropagation()}>
               <AddToCartButton product={product.raw} disabled={outOfStock} className="h-9 w-9 md:h-9 md:w-9" />
             </div>
           )}
-
         </div>
       </Link>
 
       <div className="pt-3 px-1">
-        <h3 className="text-sm text-foreground/85 line-clamp-2 leading-snug min-h-[2.5rem]">
+        <h3 className="text-sm font-medium text-foreground/90 line-clamp-2 leading-snug min-h-[2.5rem]">
           {product.name}
         </h3>
         <p className="text-sm font-bold text-foreground mt-1.5">
@@ -146,6 +95,8 @@ const ProductCard = ({ product }: { product: Product }) => {
 
 export const NewArrivals = () => {
   const { data: dbProducts = [] } = useSectionProducts({ sectionKey: "new-arrivals", limit: 12 });
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Fallback: if the admin hasn't tagged any products with the "new-arrivals"
   // section key, surface products flagged is_new OR the 12 most recently added.
@@ -174,19 +125,58 @@ export const NewArrivals = () => {
 
   const sourceProducts = dbProducts.length > 0 ? dbProducts : fallbackProducts;
   const products: Product[] = sourceProducts.map((p) => {
-    const imgs = (p.images && p.images.length > 0 ? p.images : [""]).map((s) => resolveImage(s));
-    const frames = imgs.length >= 4 ? imgs.slice(0, 4) : [...imgs, ...Array(4 - imgs.length).fill(imgs[0])];
+    const primaryImg = resolveImage(p.images?.[0]);
     return {
       id: p.id,
       name: p.name,
       price: p.price,
       detail: productDetailLine(p),
-      frames,
+      image: primaryImg,
       href: `/product/${p.id}`,
       stock: (p as any).stock,
       raw: p as DBProduct,
     };
   });
+
+  const slide = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const container = scrollRef.current;
+    const cardEl = container.querySelector(".new-arrival-card");
+    const step = cardEl ? cardEl.clientWidth + 16 : 296;
+
+    if (direction === "left") {
+      if (container.scrollLeft <= 15) {
+        container.scrollTo({ left: container.scrollWidth, behavior: "smooth" });
+      } else {
+        container.scrollBy({ left: -step, behavior: "smooth" });
+      }
+    } else {
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 20) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        container.scrollBy({ left: step, behavior: "smooth" });
+      }
+    }
+  };
+
+  // Continuous gentle auto-sliding carousel
+  useEffect(() => {
+    if (isPaused || products.length <= 3) return;
+    const interval = setInterval(() => {
+      if (!scrollRef.current) return;
+      const container = scrollRef.current;
+      const cardEl = container.querySelector(".new-arrival-card");
+      const step = cardEl ? cardEl.clientWidth + 16 : 296;
+
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 20) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        container.scrollBy({ left: step, behavior: "smooth" });
+      }
+    }, 3800);
+
+    return () => clearInterval(interval);
+  }, [isPaused, products.length]);
 
   if (products.length === 0) return null;
 
@@ -199,19 +189,65 @@ export const NewArrivals = () => {
             <span className="absolute -bottom-2 left-0 w-12 h-[3px] bg-sky rounded-full" />
           </h2>
         </div>
-        <Link
-          to="/new"
-          className="text-sm font-semibold text-primary underline underline-offset-4 decoration-sky hover:opacity-80 transition"
-        >
-          View All
-        </Link>
+        <div className="flex items-center gap-3">
+          {/* Slider controls */}
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => slide("left")}
+              aria-label="Previous slide"
+              className="w-9 h-9 rounded-full border border-border/80 bg-background/80 hover:bg-sky/15 hover:border-sky/60 hover:text-primary transition flex items-center justify-center shadow-sm text-foreground/80 active:scale-95"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => slide("right")}
+              aria-label="Next slide"
+              className="w-9 h-9 rounded-full border border-border/80 bg-background/80 hover:bg-sky/15 hover:border-sky/60 hover:text-primary transition flex items-center justify-center shadow-sm text-foreground/80 active:scale-95"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+          <Link
+            to="/new"
+            className="text-sm font-semibold text-primary underline underline-offset-4 decoration-sky hover:opacity-80 transition ml-2"
+          >
+            View All
+          </Link>
+        </div>
       </div>
 
-      <div className="-mx-4 px-4 overflow-x-auto scrollbar-hide">
-        <div className="flex gap-4 md:gap-5 pb-4">
-          {products.map((p) => (
-            <ProductCard key={p.id} product={p} />
-          ))}
+      <div className="relative group/slider">
+        {/* Left Floating Arrow */}
+        <button
+          onClick={() => slide("left")}
+          aria-label="Previous products"
+          className="hidden md:flex absolute -left-3 lg:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-background/90 backdrop-blur-md border border-border/80 shadow-xl items-center justify-center text-foreground hover:bg-sky/20 hover:text-primary hover:border-sky transition active:scale-95"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+
+        {/* Right Floating Arrow */}
+        <button
+          onClick={() => slide("right")}
+          aria-label="Next products"
+          className="hidden md:flex absolute -right-3 lg:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-background/90 backdrop-blur-md border border-border/80 shadow-xl items-center justify-center text-foreground hover:bg-sky/20 hover:text-primary hover:border-sky transition active:scale-95"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+
+        <div
+          ref={scrollRef}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+          className="-mx-4 px-4 overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"
+        >
+          <div className="flex gap-4 md:gap-5 pb-4">
+            {products.map((p) => (
+              <ProductCard key={p.id} product={p} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

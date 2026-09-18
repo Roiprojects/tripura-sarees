@@ -434,9 +434,23 @@
   box-shadow: 0 0 24px -2px hsl(43 75% 50% / 0.5), 0 4px 16px -4px hsl(166 60% 10% / 0.2);
 }
 
-/* — Luxury zoom on card hover — */
-.group:hover .luxury-zoom { transform: scale(1.07); }
-.luxury-zoom { transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1); }
+/* — Luxury zoom disabled per user request — */
+.group:hover .luxury-zoom { transform: none !important; }
+.luxury-zoom { transition: none !important; transform: none !important; }
+
+/* — Disable hover transforms/scaling/zoom on all images across the website — */
+img,
+img:hover,
+*:hover > img,
+.group:hover img,
+a:hover img,
+div:hover img,
+button:hover img,
+article:hover img,
+figure:hover img {
+  transform: none !important;
+  scale: none !important;
+}
 
 /* — Elegant section divider — */
 .silk-divider {

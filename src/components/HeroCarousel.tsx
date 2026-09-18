@@ -108,7 +108,7 @@ export function HeroCarousel() {
                       decoding="async"
                       {...({ fetchpriority: "high" } as any)}
                       onError={(e) => { (e.currentTarget as HTMLImageElement).src = resolveImage(); }}
-                      className="absolute inset-0 w-full h-full object-cover object-center select-none bg-background transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                      className="absolute inset-0 w-full h-full object-cover object-center select-none bg-background"
                     />
                     {/* Cinematic multi-stop vignette */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
@@ -170,7 +170,7 @@ export function HeroCarousel() {
                   loading="eager"
                   decoding="async"
                   onError={(e) => { (e.currentTarget as HTMLImageElement).src = resolveImage(); }}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
 
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 via-black/60 to-transparent pointer-events-none" />

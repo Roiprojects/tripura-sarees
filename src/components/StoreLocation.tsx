@@ -123,7 +123,7 @@ export const StoreLocation = () => {
                 alt={p.caption}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover"
                 onError={(e) => { (e.currentTarget as HTMLImageElement).src = resolveImage(); }}
               />
               <div className="absolute inset-x-0 bottom-0 p-2.5 bg-gradient-to-t from-black/75 to-transparent">

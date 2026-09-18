@@ -66,7 +66,7 @@ export const RecentlyViewed = () => {
                 src={resolveImage(p.image)}
                 alt={p.name}
                 loading="eager" decoding="async"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="pt-3">

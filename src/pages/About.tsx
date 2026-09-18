@@ -118,7 +118,7 @@ const About = () => {
                 <div className="group relative animate-float-slow">
                   <div className="absolute -inset-0.5 rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary/60 via-sky/40 to-primary/60 opacity-70 blur-md group-hover:opacity-100 transition-opacity" />
                   <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-lift aspect-[3/4]">
-                    <img src={storyTallImg} alt="Bridal silk saree" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img src={storyTallImg} alt="Bridal silk saree" loading="lazy" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     {/* shimmer sweep on hover */}
                     <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-1000" />
@@ -131,7 +131,7 @@ const About = () => {
                   <div className="group relative animate-float" style={{ animationDelay: "0.5s" }}>
                     <div className="absolute -inset-0.5 rounded-2xl md:rounded-3xl bg-gradient-to-br from-sky/60 to-primary/50 opacity-60 blur-md group-hover:opacity-100 transition-opacity" />
                     <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-lift aspect-square">
-                      <img src={storyWideImg} alt="Curated silk saree collection" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <img src={storyWideImg} alt="Curated silk saree collection" loading="lazy" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-1000" />
                       <Star className="absolute bottom-2 left-2 w-4 h-4 text-white/90 drop-shadow animate-twinkle" style={{ animationDelay: "0.6s" }} />
                     </div>
@@ -141,7 +141,7 @@ const About = () => {
                   <div className="group relative animate-float-slow" style={{ animationDelay: "1s" }}>
                     <div className="absolute -inset-0.5 rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary/50 to-sky/60 opacity-60 blur-md group-hover:opacity-100 transition-opacity" />
                     <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-lift aspect-square">
-                      <img src={storySmallImg} alt="Handloom cotton saree" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <img src={storySmallImg} alt="Handloom cotton saree" loading="lazy" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-1000" />
                       <Sparkles className="absolute top-2 right-2 w-4 h-4 text-white/90 drop-shadow animate-twinkle" style={{ animationDelay: "1.2s" }} />
                     </div>
@@ -223,7 +223,7 @@ const About = () => {
               <Sparkles className="absolute -bottom-2 left-1/4 w-4 h-4 text-primary/70 animate-twinkle z-20" style={{ animationDelay: "1.3s" }} />
 
               <div className="group relative rounded-3xl overflow-hidden shadow-lift aspect-[4/5] border border-border/60 animate-float-slow">
-                <img src={boutiqueImg} alt={`Inside ${site.brand.name} boutique`} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img src={boutiqueImg} alt={`Inside ${site.brand.name} boutique`} loading="lazy" className="w-full h-full object-cover" />
                 {/* top glow vignette */}
                 <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/30 via-primary/10 to-transparent mix-blend-overlay pointer-events-none" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/10 to-transparent" />
@@ -340,7 +340,7 @@ const About = () => {
                       </div>
                       <div className="group relative overflow-hidden rounded-3xl bg-background/80 backdrop-blur-xl border border-border/60 shadow-soft hover:shadow-lift transition-all">
                         <div className="relative aspect-[16/10] overflow-hidden">
-                          <img src={t.image} alt={t.title} loading="lazy" width={768} height={480} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                          <img src={t.image} alt={t.title} loading="lazy" width={768} height={480} className="w-full h-full object-cover" />
                           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
                           <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/80 backdrop-blur-md border border-border/60 text-[10px] font-bold uppercase tracking-wider text-primary shadow-soft">
                             {chapter}
@@ -387,7 +387,7 @@ const About = () => {
                           {/* magical glow */}
                           <div className="absolute -inset-1 bg-gradient-to-br from-primary/40 via-sky/30 to-primary/40 rounded-[2rem] blur-xl opacity-50 group-hover:opacity-80 transition-opacity" />
                           <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-border/60 bg-background">
-                            <img src={t.image} alt={t.title} loading="lazy" width={768} height={576} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                            <img src={t.image} alt={t.title} loading="lazy" width={768} height={576} className="w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent" />
                             {/* sparkle accents */}
                             <Sparkles className="absolute top-4 right-4 w-5 h-5 text-white/80 drop-shadow animate-pulse" />
@@ -424,7 +424,7 @@ const About = () => {
             { src: galleryExtraImg, span: "aspect-[3/4]" },
           ].map((g, i) => (
             <div key={i} className={`group relative overflow-hidden rounded-2xl md:rounded-3xl shadow-soft hover:shadow-lift transition-all ${g.span}`}>
-              <img src={g.src} alt="" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={g.src} alt="" loading="lazy" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           ))}

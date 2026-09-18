@@ -439,7 +439,7 @@ const CartRow = ({ item, colorImages, onUpdateQty, onRemove }: CartRowProps) => 
           <img
             src={activeImage}
             alt={productName}
-            className="relative w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover bg-muted ring-1 ring-border/40 group-hover:ring-primary/40 group-hover:scale-[1.02] transition-all duration-500"
+            className="relative w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover bg-muted ring-1 ring-border/40 group-hover:ring-primary/40 transition-colors duration-500"
             onError={(event) => { event.currentTarget.src = resolveImage(); }}
           />
         </Link>

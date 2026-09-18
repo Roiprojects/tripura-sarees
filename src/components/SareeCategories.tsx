@@ -110,7 +110,7 @@ export const SareeCategories = () => {
               src={t.image}
               alt={t.name}
               loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+              className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/95 via-emerald-950/40 to-black/20 group-hover:from-emerald-950/90 transition-colors" />
             <div className="absolute inset-2.5 md:inset-3.5 rounded-xl md:rounded-2xl border border-sky/50 pointer-events-none group-hover:border-sky/90 transition-colors" />

@@ -27,7 +27,7 @@ export const HeritageStory = () => (
             src={loomArt}
             alt="A handloom weaving a silk saree"
             loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover luxury-zoom"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Subtle warm overlay */}
           <div className="absolute inset-0 bg-gradient-to-tr from-amber-950/10 via-transparent to-emerald-950/5 pointer-events-none" />
