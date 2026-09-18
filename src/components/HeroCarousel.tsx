@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useImageGroup } from "@/hooks/useImageGroup";
 import { resolveImage  } from "@/lib/resolveImage";
-import heroWeddingAsset from "@/assets/sarees/hero-wedding.svg";
-import heroHandloomAsset from "@/assets/sarees/hero-handloom.svg";
-import heroFestiveAsset from "@/assets/sarees/hero-festive.svg";
-import heroDesignerAsset from "@/assets/sarees/hero-designer.svg";
-import sideBridalAsset from "@/assets/sarees/side-bridal.svg";
-import sideSilkAsset from "@/assets/sarees/side-silk.svg";
-import sideHandloomAsset from "@/assets/sarees/side-handloom.svg";
-import sideDesignerAsset from "@/assets/sarees/side-designer.svg";
+import heroWeddingAsset from "@/assets/sarees/hero-wedding.jpg";
+import heroHandloomAsset from "@/assets/sarees/hero-handloom.jpg";
+import heroFestiveAsset from "@/assets/sarees/hero-festive.jpg";
+import heroDesignerAsset from "@/assets/sarees/hero-designer.jpg";
+import sideBridalAsset from "@/assets/sarees/side-bridal.jpg";
+import sideSilkAsset from "@/assets/sarees/side-silk.jpg";
+import sideHandloomAsset from "@/assets/sarees/side-handloom.jpg";
+import sideDesignerAsset from "@/assets/sarees/side-designer.jpg";
 type Slide = { image: string; alt: string; href: string };
 
 const fallbackSlides: Slide[] = [

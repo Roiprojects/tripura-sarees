@@ -12,14 +12,14 @@
 import logoAsset from "@/assets/brand/logo.svg";
 import logoMarkAsset from "@/assets/brand/logo-mark.svg";
 
-import storeFrontAsset from "@/assets/sarees/store-front.svg";
-import sareeWallAsset from "@/assets/sarees/store-saree-wall.svg";
-import bridalFlatlayAsset from "@/assets/sarees/store-bridal-flatlay.svg";
-import loomAsset from "@/assets/sarees/story-loom.svg";
-import silkSideAsset from "@/assets/sarees/side-silk.svg";
-import bridalSideAsset from "@/assets/sarees/side-bridal.svg";
-import handloomSideAsset from "@/assets/sarees/side-handloom.svg";
-import designerSideAsset from "@/assets/sarees/side-designer.svg";
+import storeFrontAsset from "@/assets/sarees/store-front.jpg";
+import sareeWallAsset from "@/assets/sarees/store-saree-wall.jpg";
+import bridalFlatlayAsset from "@/assets/sarees/store-bridal-flatlay.jpg";
+import loomAsset from "@/assets/sarees/story-loom.jpg";
+import silkSideAsset from "@/assets/sarees/side-silk.jpg";
+import bridalSideAsset from "@/assets/sarees/side-bridal.jpg";
+import handloomSideAsset from "@/assets/sarees/side-handloom.jpg";
+import designerSideAsset from "@/assets/sarees/side-designer.jpg";
 
 export const media = {
   logo: logoAsset,

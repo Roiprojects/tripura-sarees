@@ -12,9 +12,9 @@ type Post = {
   images?: string[];
 };
 
-import drapeArt from "@/assets/sarees/category-banarasi-silk.svg";
-import careArt from "@/assets/sarees/category-tussar-silk.svg";
-import weddingArt from "@/assets/sarees/store-bridal-flatlay.svg";
+import drapeArt from "@/assets/sarees/category-banarasi-silk.jpg";
+import careArt from "@/assets/sarees/category-tussar-silk.jpg";
+import weddingArt from "@/assets/sarees/store-bridal-flatlay.jpg";
 
 const fallback: Post[] = [
   {

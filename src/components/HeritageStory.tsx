@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, HandHeart, ScanSearch, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import loomArt from "@/assets/sarees/story-loom.svg";
+import loomArt from "@/assets/sarees/story-loom.jpg";
 
 const pillars = [
   { Icon: Sparkles, title: "Handwoven", text: "Sarees woven on traditional looms, thread by thread." },

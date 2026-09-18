@@ -3,24 +3,24 @@
 // preview). Admin-managed rows always take priority.
 import { resolveImage } from "@/lib/resolveImage";
 
-import silkArt from "@/assets/sarees/category-silk-sarees.svg";
-import handloomArt from "@/assets/sarees/category-handloom-sarees.svg";
-import designerArt from "@/assets/sarees/category-designer-sarees.svg";
-import banarasiArt from "@/assets/sarees/category-banarasi-silk.svg";
-import kanjeevaramArt from "@/assets/sarees/category-kanjeevaram-silk.svg";
-import tussarArt from "@/assets/sarees/category-tussar-silk.svg";
-import tripuraArt from "@/assets/sarees/category-tripura-handloom.svg";
-import cottonArt from "@/assets/sarees/category-cotton-sarees.svg";
-import linenArt from "@/assets/sarees/category-linen-sarees.svg";
-import georgetteArt from "@/assets/sarees/category-georgette-chiffon.svg";
-import organzaArt from "@/assets/sarees/category-organza-sarees.svg";
-import partyArt from "@/assets/sarees/category-party-wear-sarees.svg";
+import silkArt from "@/assets/sarees/category-silk-sarees.jpg";
+import handloomArt from "@/assets/sarees/category-handloom-sarees.jpg";
+import designerArt from "@/assets/sarees/category-designer-sarees.jpg";
+import banarasiArt from "@/assets/sarees/category-banarasi-silk.jpg";
+import kanjeevaramArt from "@/assets/sarees/category-kanjeevaram-silk.jpg";
+import tussarArt from "@/assets/sarees/category-tussar-silk.jpg";
+import tripuraArt from "@/assets/sarees/category-tripura-handloom.jpg";
+import cottonArt from "@/assets/sarees/category-cotton-sarees.jpg";
+import linenArt from "@/assets/sarees/category-linen-sarees.jpg";
+import georgetteArt from "@/assets/sarees/category-georgette-chiffon.jpg";
+import organzaArt from "@/assets/sarees/category-organza-sarees.jpg";
+import partyArt from "@/assets/sarees/category-party-wear-sarees.jpg";
 
-import weddingArt from "@/assets/sarees/occasion-wedding.svg";
-import festiveArt from "@/assets/sarees/occasion-festive.svg";
-import partyOccasionArt from "@/assets/sarees/occasion-party.svg";
-import officeArt from "@/assets/sarees/occasion-office-wear.svg";
-import dailyArt from "@/assets/sarees/occasion-daily-wear.svg";
+import weddingArt from "@/assets/sarees/occasion-wedding.jpg";
+import festiveArt from "@/assets/sarees/occasion-festive.jpg";
+import partyOccasionArt from "@/assets/sarees/occasion-party.jpg";
+import officeArt from "@/assets/sarees/occasion-office-wear.jpg";
+import dailyArt from "@/assets/sarees/occasion-daily-wear.jpg";
 
 export type SareeCategory = {
   slug: string;

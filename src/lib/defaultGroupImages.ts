@@ -13,20 +13,20 @@ export type DefaultImage = {
 
 export const DEFAULT_GROUP_IMAGES: Record<string, DefaultImage[]> = {
   "hero-main": [
-    { image: "/src/assets/sarees/hero-wedding.svg", title: "The Wedding Edit — Banarasi & Kanjeevaram silks", href: "/occasion/wedding" },
-    { image: "/src/assets/sarees/hero-handloom.svg", title: "Handloom cotton sarees woven in Tripura", href: "/category/handloom-sarees" },
-    { image: "/src/assets/sarees/hero-festive.svg", title: "Festive season sarees", href: "/occasion/festive" },
-    { image: "/src/assets/sarees/hero-designer.svg", title: "New arrivals — designer party drapes", href: "/new" },
+    { image: "/src/assets/sarees/hero-wedding.jpg", title: "The Wedding Edit — Banarasi & Kanjeevaram silks", href: "/occasion/wedding" },
+    { image: "/src/assets/sarees/hero-handloom.jpg", title: "Handloom cotton sarees woven in Tripura", href: "/category/handloom-sarees" },
+    { image: "/src/assets/sarees/hero-festive.jpg", title: "Festive season sarees", href: "/occasion/festive" },
+    { image: "/src/assets/sarees/hero-designer.jpg", title: "New arrivals — designer party drapes", href: "/new" },
   ],
   "hero-sidecards": [
-    { image: "/src/assets/sarees/side-bridal.svg", subtitle: "BRIDAL SILKS", href: "/occasion/wedding" },
-    { image: "/src/assets/sarees/side-silk.svg", subtitle: "KANJEEVARAM", href: "/category/kanjeevaram-silk" },
-    { image: "/src/assets/sarees/side-handloom.svg", subtitle: "HANDLOOM", href: "/category/handloom-sarees" },
-    { image: "/src/assets/sarees/side-designer.svg", subtitle: "DESIGNER", href: "/category/designer-sarees" },
+    { image: "/src/assets/sarees/side-bridal.jpg", subtitle: "BRIDAL SILKS", href: "/occasion/wedding" },
+    { image: "/src/assets/sarees/side-silk.jpg", subtitle: "KANJEEVARAM", href: "/category/kanjeevaram-silk" },
+    { image: "/src/assets/sarees/side-handloom.jpg", subtitle: "HANDLOOM", href: "/category/handloom-sarees" },
+    { image: "/src/assets/sarees/side-designer.jpg", subtitle: "DESIGNER", href: "/category/designer-sarees" },
   ],
   "footer-banners": [
-    { image: "/src/assets/sarees/footer-handloom.svg", title: "Support Handloom", subtitle: "Every purchase keeps a weaver's loom running.", href: "/category/handloom-sarees", ctaLabel: "Shop Handloom" },
-    { image: "/src/assets/sarees/footer-bridal.svg", title: "The Bridal Trousseau", subtitle: "Silks and zari for every wedding ritual.", href: "/occasion/wedding", ctaLabel: "Explore" },
+    { image: "/src/assets/sarees/footer-handloom.jpg", title: "Support Handloom", subtitle: "Every purchase keeps a weaver's loom running.", href: "/category/handloom-sarees", ctaLabel: "Shop Handloom" },
+    { image: "/src/assets/sarees/footer-bridal.jpg", title: "The Bridal Trousseau", subtitle: "Silks and zari for every wedding ritual.", href: "/occasion/wedding", ctaLabel: "Explore" },
   ],
   "sale-banner": [],
   "testimonials": [],
