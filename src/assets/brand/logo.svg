@@ -1,24 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" role="img" aria-label="Tripura Sarees">
-  <!-- Background -->
-  <rect width="520" height="140" fill="#1a1a1a" rx="0"/>
-  <!-- Stylised T monogram -->
-  <g transform="translate(150 45)">
-    <!-- Top bar of T -->
-    <rect x="-52" y="0" width="104" height="18" rx="3" fill="#c0c0c0"/>
-    <!-- Stem of T -->
-    <rect x="-10" y="0" width="20" height="68" rx="2" fill="#c0c0c0"/>
-    <!-- Subtle highlight on T -->
-    <rect x="-52" y="0" width="104" height="6" rx="2" fill="#e0e0e0" opacity="0.4"/>
-    <rect x="-10" y="0" width="20" height="6" rx="2" fill="#e0e0e0" opacity="0.4"/>
-    <!-- Bottom serif accent -->
-    <rect x="-14" y="64" width="28" height="4" rx="1" fill="#a0a0a0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" width="500" height="160" role="img" aria-label="Tripura Sarees">
+  <defs>
+    <!-- Antique Gold Foil Gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C365"/>
+      <stop offset="30%" stop-color="#C9A227"/>
+      <stop offset="65%" stop-color="#EBD07E"/>
+      <stop offset="100%" stop-color="#A88214"/>
+    </linearGradient>
+
+    <!-- Deep Emerald / Forest Gradient for Brand Typography -->
+    <linearGradient id="emeraldText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#145A48"/>
+      <stop offset="100%" stop-color="#083025"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#C9A227" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Centered Luxury Monogram Group -->
+  <g transform="translate(250, 78)">
+    <!-- Large Classical Roman Serif "T" in Antique Gold Foil -->
+    <g fill="url(#goldGradient)" filter="url(#softGlow)">
+      <!-- Top Crossbar with Classical Bracketed Serifs & Vertical Stem with Foot Serifs -->
+      <path d="M -70 -54 C -70 -42, -60 -39, -48 -39 L -14 -39 L -14 54 C -25 54, -34 57, -34 66 L 34 66 C 34 57, 25 54, 14 54 L 14 -39 L 48 -39 C 60 -39, 70 -42, 70 -54 Z"/>
+    </g>
+
+    <!-- Subtle Masking Halo behind TRIPURA so text reads with 100% clarity across the gold stem -->
+    <rect x="-185" y="-16" width="370" height="32" fill="#FAF7F2" fill-opacity="0.85" rx="4"/>
+
+    <!-- TRIPURA: Wide-Tracked Capital Typography intersecting horizontally -->
+    <text x="0" y="8" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', 'Cormorant Garamond', Georgia, serif" font-size="30" font-weight="700" fill="url(#emeraldText)" letter-spacing="20">TRIPURA</text>
+
+    <!-- SAREES: Refined Small Caps in Antique Gold -->
+    <text x="5" y="32" text-anchor="middle" font-family="'Montserrat', 'Nunito', sans-serif" font-size="10.5" font-weight="600" fill="#B8860B" letter-spacing="10">SAREES</text>
+
+    <!-- Artisanal Diamond Accent -->
+    <polygon points="5,41 8.5,45 5,49 1.5,45" fill="#C9A227"/>
   </g>
-  <!-- TRIPURA text -->
-  <text x="290" y="58" font-family="'Nunito', 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="300" fill="#ffffff" letter-spacing="18">TRIPURA</text>
-  <!-- Subtle divider line -->
-  <line x1="290" y1="74" x2="505" y2="74" stroke="#C9A227" stroke-width="1.5" opacity="0.7"/>
-  <!-- SAREES tagline -->
-  <text x="290" y="96" font-family="'Nunito', 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" fill="#C9A227" letter-spacing="8">SAREES</text>
-  <!-- Small diamond accent -->
-  <rect x="395" y="103" width="4" height="4" fill="#C9A227" transform="rotate(45 397 105)"/>
 </svg>

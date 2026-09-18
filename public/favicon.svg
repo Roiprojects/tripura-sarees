@@ -1,10 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0F5E4B"/>
-  <rect x="4" y="4" width="56" height="56" rx="11" fill="none" stroke="#C9A227" stroke-width="2.5"/>
-  <g transform="translate(31 33) scale(0.62)">
-  <g transform="scale(1)">
-    <path d="M2 34 C-22 34 -28 6 -16 -12 C-6 -27 12 -30 15 -42 C23 -26 26 -8 22 8 C19 24 13 34 2 34 Z" fill="#C9A227" stroke="#E8CF7A" stroke-width="2.2"/>
-    <path d="M2 24 C-12 24 -16 8 -9 -3 C-3 -12 7 -15 9 -24 C13 -14 15 -4 12 6 C10 16 7 24 2 24 Z" fill="none" stroke="#E8CF7A" stroke-width="1.6"/>
-    <circle cx="1" cy="8" r="3.4" fill="#E8CF7A"/>
-  </g></g>
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8CA6F"/>
+      <stop offset="50%" stop-color="#C9A227"/>
+      <stop offset="100%" stop-color="#9C7815"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded tile in Deep Emerald -->
+  <rect width="64" height="64" rx="16" fill="#0A362C"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="13.5" fill="none" stroke="#C9A227" stroke-width="1.5" stroke-opacity="0.6"/>
+  
+  <!-- Classical T Monogram -->
+  <g fill="url(#favGold)" transform="translate(32, 28) scale(0.65)">
+    <path d="M -26 -18 C -26 -12, -22 -11, -17 -11 L -5 -11 L -5 26 C -10 26, -14 27, -14 32 L 14 32 C 14 27, 10 26, 5 26 L 5 -11 L 17 -11 C 22 -11, 26 -12, 26 -18 Z"/>
+  </g>
+  <text x="32" y="53" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="7.5" font-weight="700" fill="#FAF7F2" letter-spacing="3.5">TRIPURA</text>
 </svg>
